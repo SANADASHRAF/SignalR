@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Scripts/jquery-1.6.4.js"></script>
+    <script src="/Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <script src="/signalr/hubs"></script>
+
+
+    
+    <script>
+        var chathub;
+
+        $(function () {
+
+            //access ourhub          
+            chathub = $.connection.chat;
+
+            //register to method in the serer (من خلالها السيرفر هيبعتلى)
+            chathub.client.recieveMessage = onrecive;
+
+            //start permenant channal (know the server that this client is from your clients and want subscribe)
+            $.connection.hub.start();
+
+            //بتشوف اللى بيحصل من اول متبدا الكونكشن in console (start)
+            $.connection.hub.logging = true;
+
+        });
+
+        //fun that receve msg from server
+        var onrecive = function (msg) {
+            $("#showmsg").append("<div>" + msg + "</div>");
+
+        };
+
+        //fun to call server with its method to send msg(sendMessage)
+        var onsend = function () {
+
+            var msg = $("#txtmsg").val();
+            chathub.server.sendMessage(msg);
+
+        };
+
+        //fun to call server with its method to send groupname and this client join(joingroub)
+        var sendNameOfGroup = function () {
+
+            var groupName = $("#txtgroupname").val();
+            chathub.server.joingroub(groupName);
+
+        };
+
+        //fun to call server with its method to send msg for client in group(groupSendMessage)
+        var sendMsgForGroup = function () {
+            var groupNamee = $("#txtgroupname").val();
+            var msg = $("#txtsendmsggroup").val();
+            chathub.server.groupSendMessage(groupNamee, msg);
+
+        };
+
+
+    </script>
+</head>
+
+
+<body>
+    <!--  for all client-->
+    <label>message</label>
+    <input type="text" id="txtmsg" />
+    <input type="button" value="send" id="sendid" onclick="onsend()" />
+
+
+    <!--for group-->
+    <br />
+    <br />
+    <br />
+    <input type="text" id="txtgroupname" placeholder="groupname" />
+    <input type="text" id="txtsendmsggroup" placeholder="send msg for group" />
+
+    <input type="button" id="btnsendgroupname" value="send groupname" onclick="sendNameOfGroup()" />
+    <input type="button" id="btnsendmsg" value="send msg in group" onclick="sendMsgForGroup()" />
+    <br />
+    <br />
+    <br />
+    <div id="showmsg">
+
+    </div>
+    <br/>
+
+</body>
+</html>

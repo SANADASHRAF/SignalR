@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kPcvyH7sB+aBqL9ofe4UJmtze6jT6wn/dZy2NqqdluOtRU5Fp+DldXMUf4rc3RTslNyfFgSVp+P079haN5D3VQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\top\\Desktop\\signalr\\signalr_practice\\WinFormsApp1\\WinFormsApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\top\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.3\\microsoft.aspnet.signalr.client.2.4.3.nupkg.sha512",
+    "C:\\Users\\top\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
