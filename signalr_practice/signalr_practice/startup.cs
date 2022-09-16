@@ -13,7 +13,9 @@ namespace signalr_practice
         public void Configuration(IAppBuilder app)
         {
             //any signalr request (هيعدى عليها الاول)
+            app.MapConnection<MyConnection1>("/con");
             app.MapSignalR();
+            
         }
     }
 }
