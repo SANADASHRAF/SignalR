@@ -10,16 +10,18 @@ namespace signalr_practice
 {
     //for change name when cleint deal with it
     [HubName("chat")]
+
     public class chathub : Hub
     {
         //method for client to conect with server
+        
         public void SendMessage(string msg)
         {
             //هيبعت الرسالة دى لكل اللى موجدين ماعدا اللى باعتها 
             Clients.Others.recieveMessage("new massege");
 
             //for deal with all clieent
-            Clients.All.recieveMessage(msg);
+            Clients.All.recieveMessage($"{msg}");
             
             //هتروح للى باعت الرسالة بس مش هتوصل لباقى الموجودين
             Clients.Caller.recieveMessage("sent");

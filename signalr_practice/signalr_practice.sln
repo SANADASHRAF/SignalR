@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signalr_practice", "signalr_practice\signalr_practice.csproj", "{77C6CCBC-7638-4748-BFEE-7F283C1F78A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{926DAB95-7C8A-45BE-A2ED-314C04DF59E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{926DAB95-7C8A-45BE-A2ED-314C04DF59E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signalRWebSecure", "signalRWebSecure\signalRWebSecure.csproj", "{E03CC1BF-02BE-4D1A-A019-C0199AE30000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{926DAB95-7C8A-45BE-A2ED-314C04DF59E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926DAB95-7C8A-45BE-A2ED-314C04DF59E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926DAB95-7C8A-45BE-A2ED-314C04DF59E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03CC1BF-02BE-4D1A-A019-C0199AE30000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03CC1BF-02BE-4D1A-A019-C0199AE30000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03CC1BF-02BE-4D1A-A019-C0199AE30000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03CC1BF-02BE-4D1A-A019-C0199AE30000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
